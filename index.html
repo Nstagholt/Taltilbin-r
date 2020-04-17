@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type = "text" name = "deci" id = "deci" size = "10" maxlength = "10" />
+        <input type="button" value="omdan" onclick="Taltilbinær()" />
+        <div id = "resultat"></div>
+
+
+
+        <script>
+
+            function Taltilbinær() {
+            var x = document.getElementById("deci").value;
+            if ((/[^0-9]/g.test(x)) || x == "") {
+            document.getElementById("deci").focus();
+            return false;
+        }
+            x = parseInt(x);
+            var bin = x.toString(2);
+
+            var result = bin;
+
+            document.getElementById("resultat").innerHTML = result;
+        }
+
+        </script>
+    </body>
+</html>
